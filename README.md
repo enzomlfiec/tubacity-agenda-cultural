@@ -1,6 +1,6 @@
 # TubaCity
 
-Site de agenda cultural feito em React, Vite e Tailwind CSS para um trabalho da faculdade.
+Site de agenda cultural feito em React, Vite e Tailwind CSS para um trabalho da FIEC.
 
 ## Como rodar
 
