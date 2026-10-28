@@ -1,6 +1,9 @@
 export default function EventCard({ evento }) {
     return (
-        <article className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+        <article
+            aria-labelledby={`evento-${evento.id}-titulo`}
+            className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
+        >
             <img
                 src={evento.imagem}
                 alt={evento.alt}
@@ -13,7 +16,7 @@ export default function EventCard({ evento }) {
                     {evento.categoria}
                 </p>
 
-                <h3 className="mt-2 text-xl font-bold">
+                <h3 id={`evento-${evento.id}-titulo`} className="mt-2 text-xl font-bold">
                     {evento.titulo}
                 </h3>
 
@@ -42,19 +45,19 @@ export default function EventCard({ evento }) {
                     <a
                         href={evento.informacoes}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex min-h-11 items-center rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white underline hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500"
                     >
-                        Mais informações: {evento.titulo}
+                        Mais informações: {evento.titulo} (abre em nova aba)
                     </a>
 
                     <a
                         href={evento.inscricao}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex min-h-11 items-center rounded-lg border border-blue-700 px-4 py-2 font-semibold text-blue-700 underline hover:bg-blue-50 dark:border-blue-300 dark:text-blue-300 dark:hover:bg-gray-800"
                     >
-                        Inscrição: {evento.titulo}
+                        Inscrição: {evento.titulo} (abre em nova aba)
                     </a>
                 </div>
             </div>

@@ -59,7 +59,7 @@ export default function App() {
             href="#inicio"
             className="text-2xl flex flex-row justify-center items-center gap-2 font-bold tracking-tight text-blue-700 dark:text-blue-300"
           >
-            <Calendar/>
+            <Calendar aria-hidden="true" focusable="false" />
             TubaCity
           </a>
 
